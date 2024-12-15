@@ -58,8 +58,6 @@ def main():
     # Process crafting loop
     while materials and magic_level:
         process_zeros(materials, magic_level)
-        if not materials or not magic_level:  # Ensure no empty collections
-            break
 
         # Get the current material and magic value
         material = materials.pop()

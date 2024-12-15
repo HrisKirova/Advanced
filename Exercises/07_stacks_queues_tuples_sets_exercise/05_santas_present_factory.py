@@ -46,5 +46,5 @@ if materials:
     print(f"Materials left: {', '.join(map(str, reversed(materials)))}")
 if magic_level:
     print(f"Magic left: {', '.join(map(str, magic_level))}")
-for present, count in presents.items():
+for present, count in sorted(presents.items()):
     print(f'{present}: {count}')
