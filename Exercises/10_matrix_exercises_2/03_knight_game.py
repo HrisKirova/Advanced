@@ -4,12 +4,12 @@ def is_valid_move(row, col, n):
 
 def count_attacks(board, row, col, n, moves):
     """Count how many knights the current knight can attack."""
-    attacks = 0
+    attacks_count = 0
     for dr, dc in moves:
         new_row, new_col = row + dr, col + dc
         if is_valid_move(new_row, new_col, n) and board[new_row][new_col] == "K":
-            attacks += 1
-    return attacks
+            attacks_count += 1
+    return attacks_count
 
 # Input
 n = int(input())
