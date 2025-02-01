@@ -43,6 +43,6 @@ else:
     print("Chocolate: empty")
 
 if milk_cups:
-    print(f'Milk: {", ".join(str(y) for y in milk_cups)}')
+    print(f"Milk: {', '.join(str(y) for y in milk_cups)}")
 else:
     print("Milk: empty")

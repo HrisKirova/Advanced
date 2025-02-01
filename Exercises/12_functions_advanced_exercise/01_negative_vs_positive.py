@@ -15,8 +15,8 @@ numbers = [int(n) for n in input().split()]
 negative_sum = sum_negative(*numbers)
 positive_sum = sum_positive(*numbers)
 
-print(positive_sum)
 print(negative_sum)
+print(positive_sum)
 
 def absolute_comparison(pos_sum, neg_sum):
     if pos_sum < abs(neg_sum):

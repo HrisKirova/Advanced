@@ -17,17 +17,27 @@
 #
 # test_string = input()
 # print(is_balanced(test_string))  # True
+
 test_string = input()
 
 stack = []
 pairs = {")": "(", "}": "{", "]": "["}
+
+is_balanced = True  # Flag to track whether the parentheses are balanced
+
 for char in test_string:
-    if char in "({[":
+    if char in "({[":  # Opening brackets
         stack.append(char)
-    elif char in ")}]":
+    elif char in ")}]":  # Closing brackets
         if not stack or stack[-1] != pairs[char]:
-            print("NO")
+            is_balanced = False  # Set flag to false if unbalanced
             break
         stack.pop()
-if not stack:
-    print("Yes".upper())
+
+# Final check: if stack is not empty, it's unbalanced
+if is_balanced and not stack:
+    print("YES")
+else:
+    print("NO")
+
+

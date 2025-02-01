@@ -1,12 +1,16 @@
 def age_assignment(*names, **kwargs):
+    # Create a dictionary to store the assigned ages
     assignment = {}
-    for name in names:
-        for key, value in kwargs.items():
-            if name[0] == key:
-                assignment[name] = value
 
-    assignment = sorted(assignment.items())
-    return "\n".join(f"{name} is {age} years old" for name, age in assignment)
+    # Assign ages to names based on their first letter
+    for name in names:
+        first_letter = name[0]  # Get the first letter of the name
+        if first_letter in kwargs:
+            assignment[name] = kwargs[first_letter]
+
+    # Sort names alphabetically and format the result
+    return "\n".join(f"{name} is {age} years old." for name, age in sorted(assignment.items()))
+
 
 # def age_assignment(*names, **kwargs):
 #     # Use a dictionary comprehension to directly map names to ages
@@ -16,4 +20,4 @@ def age_assignment(*names, **kwargs):
 #
 
 
-print(age_assignment("Amy", "Bill", "Willy", W=36, A=22, B=61))
+print(age_assignment("Peter", "George", G=26, P=19))

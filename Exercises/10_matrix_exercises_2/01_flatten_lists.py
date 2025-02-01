@@ -1,12 +1,14 @@
-text = list(input().split("|"))
-matrix = []
+# Read input and split into sub-lists
+text = input().split("|")
 
-for el in text:
-    current_el = el.split()
-    matrix.append(current_el)
+# Flatten sub-lists in reverse order
+result = []
+for sublist in reversed(text):
+    # Split by spaces, ignore extra spaces, and extend the result list
+    result.extend(sublist.split())
 
-for row in range(len(matrix) - 1, -1, -1):
-    print(*matrix[row], end=" ")
+# Print the final flattened list
+print(" ".join(result))
 
 # Solution 2
 # Input processing

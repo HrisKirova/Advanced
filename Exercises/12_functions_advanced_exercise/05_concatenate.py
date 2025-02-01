@@ -1,6 +1,3 @@
-from typing import final
-
-
 def concatenate(*args, **kwargs):
     new_text = ""
     for text in args:

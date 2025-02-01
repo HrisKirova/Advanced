@@ -11,4 +11,4 @@ for char in text:
 
 # Sort the dictionary keys alphabetically and print the results
 for char in sorted(char_count.keys()):
-    print(f"{char}: {char_count[char]}")
+    print(f"{char}: {char_count[char]} time/s")

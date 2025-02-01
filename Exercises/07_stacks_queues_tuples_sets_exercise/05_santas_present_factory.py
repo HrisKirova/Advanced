@@ -5,11 +5,11 @@ magic_level = deque(map(int, input().split()))
 presents = {}
 
 while materials and magic_level:
-    if materials[-1] == 0:
-        materials.pop()
-        continue
-    if magic_level[0] == 0:
-        magic_level.popleft()
+    if materials[-1] == 0 or magic_level[0] == 0:
+        if materials[-1] == 0:
+            materials.pop()
+        if magic_level[0] == 0:
+            magic_level.popleft()
         continue
     material = materials.pop()
     magic = magic_level.popleft()
@@ -18,7 +18,6 @@ while materials and magic_level:
         if "Doll" not in presents:
             presents["Doll"] = 0
         presents["Doll"] += 1
-
     elif total_magic == 250:
         if "Wooden train" not in presents:
             presents["Wooden train"] = 0
@@ -31,13 +30,15 @@ while materials and magic_level:
         if "Bicycle" not in presents:
             presents["Bicycle"] = 0
         presents["Bicycle"] += 1
+
     elif total_magic < 0:
         sum_ = material + magic
         materials.append(sum_)
     elif total_magic > 0:
         materials.append(material + 15)
 
-if ("Doll" and "Wooden train" in presents) or ("Teddy bear" and "Bicycle" in presents):
+if (("Doll" in presents and "Wooden train" in presents) or
+    ("Teddy bear" in presents and "Bicycle" in presents)):
     print("The presents are crafted! Merry Christmas!")
 else:
     print("No presents this Christmas!")

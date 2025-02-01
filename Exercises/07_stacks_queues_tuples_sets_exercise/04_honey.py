@@ -28,6 +28,6 @@ while working_bees and nectar:
 
 print(f"Total honey made: {total_honey}")
 if working_bees:
-    print(f"Bees left: {', '.join(map(str, working_bees))}")
+    print(f'Bees left: {", ".join(map(str, working_bees))}')
 elif nectar:
-    print(f"Nectar left: {', '.join(map(str, nectar))}")
+    print(f'Nectar left: {", ".join(map(str, nectar))}')

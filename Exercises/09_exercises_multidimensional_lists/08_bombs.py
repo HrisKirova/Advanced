@@ -1,6 +1,7 @@
 mat_size = int(input())
 matrix = [[int(num) for num in input().split()] for row in range(mat_size)]
 
+
 bomb_coordinates = input().split()
 '''
 123

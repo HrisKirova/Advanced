@@ -13,5 +13,5 @@ for _ in range(n_commands):
             print(max(stack))
         elif command[0] == "4":
             print(min(stack))
-for _ in range(len(stack)):
-    print(stack.pop(), end=" ")
+
+print(", ".join(map(str, reversed(stack))))

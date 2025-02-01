@@ -1,15 +1,14 @@
-
-n, m = map(int, input().split())
+n, m = [int(el) for el in input().split()]
 set1 = set()
 set2 = set()
-for x in range(n + m):
+for _ in range(n):
     num = int(input())
-    if len(set1) < n:
-        set1.add(num)
-    else:
-        set2.add(num)
+    set1.add(num)
+for _ in range(m):
+    num = int(input())
+    set2.add(num)
 
 result = set1.intersection(set2)
 
 
-print(" ".join(str(x) for x in result))
+print(*result, sep="\n")
