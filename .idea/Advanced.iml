@@ -5,7 +5,7 @@
       <sourceFolder url="file://$MODULE_DIR$/OOP/02_Classes_and_Objects/ex_05" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/OOP/06_polymorphism_and_abstraction/01_vehicle" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/OOP/exams_oop/14_Aug_2024/project" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/OOP/exams_oop/10_aug_2024/project" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/OOP/exams_oop/10_aug_2024" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/.venv" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.9 (Advanced)" jdkType="Python SDK" />
