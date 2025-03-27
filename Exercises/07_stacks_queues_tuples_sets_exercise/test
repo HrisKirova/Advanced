@@ -1,0 +1,5 @@
+paired_colors = {
+    "orange": ["red", "yellow"],
+    "purple": ["red", "blue"],
+    "green": ["yellow", "blue"]
+}
