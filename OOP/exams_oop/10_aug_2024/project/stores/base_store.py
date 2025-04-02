@@ -38,3 +38,19 @@ class BaseStore(ABC):
             raise ValueError("Store capacity must be a positive number or 0!")
         self.__capacity = value
 
+    def get_estimated_profit(self):
+        profit = 0.10
+        sum_prices = sum(product.price for product in self.products)
+        profit *= sum_prices
+
+        return f"Estimated future profit for {len(self.products)} products is {profit:.2f}"
+
+    @property
+    @abstractmethod
+    def store_type(self):
+        pass
+
+
+    @abstractmethod
+    def store_stats(self):
+        pass
